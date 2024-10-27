@@ -1,0 +1,12 @@
+[{
+	"modid": "additionalapi",
+	"name": "AdditionalAPI",
+	"version": "1.0.0",
+	"mcversion": "1.12.2",
+	"description": "Provide more API for CraftTweaker.",
+	"authorList": [Swallows_],
+	"credits": "",
+	"url": "",
+	"updateJSON": "",
+	"logoFile": ""
+}]
