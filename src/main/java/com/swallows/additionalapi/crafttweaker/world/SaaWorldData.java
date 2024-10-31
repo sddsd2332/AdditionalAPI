@@ -2,20 +2,18 @@ package com.swallows.additionalapi.crafttweaker.world;
 
 import com.swallows.additionalapi.data.ArchiveData;
 import com.swallows.additionalapi.util.getData;
-import crafttweaker.annotations.ZenRegister;
 import crafttweaker.api.data.IData;
 import crafttweaker.mc1120.data.NBTConverter;
 import net.minecraft.nbt.NBTTagCompound;
 import stanhebben.zenscript.annotations.ZenClass;
 import stanhebben.zenscript.annotations.ZenMethod;
 
-@ZenRegister
-@ZenClass("mods.additionalapi.WorldData")
+@ZenClass("mods.additionalapi.SaWorldData")
 @SuppressWarnings("unused")
 public class SaaWorldData {
 
     @ZenMethod
-    public  static void setArchiveData (String name, String key, IData iData) {
+    public static void setArchiveData (String name, String key, IData iData) {
         ArchiveData archivedata = getData.getArchiveData(name);
         archivedata.setArchiveData(key, (NBTTagCompound) NBTConverter.from(iData));
     }

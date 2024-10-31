@@ -1,8 +1,8 @@
 #priority 50
 #loader crafttweaker reloadable
 
-import mods.additionalapi.BigInteger;
-import mods.additionalapi.WorldData;
+import mods.additionalapi.SaBigInteger;
+import mods.additionalapi.SaWorldData;
 import crafttweaker.event.PlayerInteractBlockEvent;
 import crafttweaker.data.IData;
 

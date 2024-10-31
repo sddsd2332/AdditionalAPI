@@ -63,6 +63,7 @@ dependencies {
     //     transitive = false
     // }
     implementation 'curse.maven:crafttweaker-239197:5486112'
+//    implementation 'curse.maven:ae2-570458:5411078'
 //    implementation 'curse.maven:crafttweaker-239197:4534504'
 
     implementation rfg.deobf("curse.maven:zenutil-401178:5779305")

