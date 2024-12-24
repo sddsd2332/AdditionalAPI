@@ -9,7 +9,7 @@ import stanhebben.zenscript.annotations.ZenMethod;
 import java.nio.charset.StandardCharsets;
 import java.util.UUID;
 
-@ZenClass("mods.additionalapi.SaUUID")
+@ZenClass("mods.additionalapi.UUID")
 @SuppressWarnings("unused")
 public class SaaUUID {
 

@@ -5,7 +5,7 @@ import stanhebben.zenscript.annotations.ZenMethod;
 
 import java.math.BigInteger;
 
-@ZenClass("mods.additionalapi.SaBigInteger")
+@ZenClass("mods.additionalapi.BigInteger")
 @SuppressWarnings("unused")
 public class SaaBigInteger {
 

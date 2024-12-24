@@ -8,7 +8,7 @@ import net.minecraft.nbt.NBTTagCompound;
 import stanhebben.zenscript.annotations.ZenClass;
 import stanhebben.zenscript.annotations.ZenMethod;
 
-@ZenClass("mods.additionalapi.SaWorldData")
+@ZenClass("mods.additionalapi.WorldData")
 @SuppressWarnings("unused")
 public class SaaWorldData {
 

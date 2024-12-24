@@ -13,9 +13,6 @@ public class Proxy {
 
     public static void preInit(FMLPreInitializationEvent event)
     {
-        CraftTweakerAPI.registerClass(SaaWorldData.class);
-        CraftTweakerAPI.registerClass(SaaBigInteger.class);
-        CraftTweakerAPI.registerClass(SaaUUID.class);
         CraftTweakerAPI.tweaker.loadScript(false, "additionalapi");
     }
 

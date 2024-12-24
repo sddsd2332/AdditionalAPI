@@ -13,7 +13,7 @@ public class AdditionalAPIConfig {
     @Config.Name("Server")
     public static Server SERVER = new Server();
 
-    static {
-        ConfigAnytime.register(AdditionalAPIConfig.class);
-    }
+//    static {
+//        ConfigAnytime.register(AdditionalAPIConfig.class);
+//    }
 }
