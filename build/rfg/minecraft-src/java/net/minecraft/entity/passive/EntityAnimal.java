@@ -22,7 +22,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 public abstract class EntityAnimal extends EntityAgeable implements IAnimals
 {
     protected Block spawnableBlock = Blocks.GRASS;
-    private int inLove;
+    public int inLove;
     private UUID playerInLove;
 
     public EntityAnimal(World worldIn)

@@ -22,7 +22,7 @@ public class ItemTool extends Item
     protected float attackDamage;
     protected float attackSpeed;
     /** The material this tool is made from. */
-    protected Item.ToolMaterial toolMaterial;
+    public Item.ToolMaterial toolMaterial;
 
     protected ItemTool(float attackDamageIn, float attackSpeedIn, Item.ToolMaterial materialIn, Set<Block> effectiveBlocksIn)
     {

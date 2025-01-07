@@ -1,10 +1,12 @@
 package com.swallows.additionalapi.crafttweaker.util;
 
+import crafttweaker.annotations.ZenRegister;
 import stanhebben.zenscript.annotations.ZenClass;
 import stanhebben.zenscript.annotations.ZenMethod;
 
 import java.security.SecureRandom;
 
+@ZenRegister
 @ZenClass("mods.additionalapi.SecureRandom")
 @SuppressWarnings("unused")
 public class SaaSecureRandom {

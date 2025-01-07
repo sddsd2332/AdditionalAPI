@@ -23,23 +23,23 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 public abstract class MobSpawnerBaseLogic
 {
     /** The delay to spawn. */
-    private int spawnDelay = 20;
-    private final List<WeightedSpawnerEntity> potentialSpawns = Lists.<WeightedSpawnerEntity>newArrayList();
-    private WeightedSpawnerEntity spawnData = new WeightedSpawnerEntity();
+    public int spawnDelay = 20;
+    public final List<WeightedSpawnerEntity> potentialSpawns = Lists.<WeightedSpawnerEntity>newArrayList();
+    public WeightedSpawnerEntity spawnData = new WeightedSpawnerEntity();
     /** The rotation of the mob inside the mob spawner */
-    private double mobRotation;
+    public double mobRotation;
     /** the previous rotation of the mob inside the mob spawner */
-    private double prevMobRotation;
-    private int minSpawnDelay = 200;
-    private int maxSpawnDelay = 800;
-    private int spawnCount = 4;
+    public double prevMobRotation;
+    public int minSpawnDelay = 200;
+    public int maxSpawnDelay = 800;
+    public int spawnCount = 4;
     /** Cached instance of the entity to render inside the spawner. */
     private Entity cachedEntity;
-    private int maxNearbyEntities = 6;
+    public int maxNearbyEntities = 6;
     /** The distance from which a player activates the spawner. */
     private int activatingRangeFromPlayer = 16;
     /** The range coefficient for spawning entities around. */
-    private int spawnRange = 4;
+    public int spawnRange = 4;
 
     @Nullable
     public ResourceLocation getEntityId()
@@ -59,7 +59,7 @@ public abstract class MobSpawnerBaseLogic
     /**
      * Returns true if there's a player close enough to this mob spawner to activate it.
      */
-    private boolean isActivated()
+    public boolean isActivated()
     {
         BlockPos blockpos = this.getSpawnerPosition();
         return this.getSpawnerWorld().isAnyPlayerWithinRangeAt((double)blockpos.getX() + 0.5D, (double)blockpos.getY() + 0.5D, (double)blockpos.getZ() + 0.5D, (double)this.activatingRangeFromPlayer);
@@ -161,7 +161,7 @@ public abstract class MobSpawnerBaseLogic
         }
     }
 
-    private void resetTimer()
+    public void resetTimer()
     {
         if (this.maxSpawnDelay <= this.minSpawnDelay)
         {

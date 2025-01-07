@@ -1,13 +1,8 @@
 package com.swallows.additionalapi.misc;
 
-import com.swallows.additionalapi.crafttweaker.util.SaaBigInteger;
-import com.swallows.additionalapi.crafttweaker.util.SaaUUID;
-import com.swallows.additionalapi.crafttweaker.world.SaaWorldData;
 import crafttweaker.CraftTweakerAPI;
-import net.minecraftforge.fml.common.event.FMLInitializationEvent;
-import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
-import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
-import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.event.*;
 
 public class Proxy {
 
@@ -25,8 +20,7 @@ public class Proxy {
     {
 
     }
-
-    public static void serverInit(FMLServerStartingEvent event)
+    public static void onServerStart(FMLServerStartingEvent event)
     {
 
     }

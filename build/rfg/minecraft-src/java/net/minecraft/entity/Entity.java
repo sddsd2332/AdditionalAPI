@@ -181,7 +181,7 @@ public abstract class Entity implements ICommandSender, net.minecraftforge.commo
     /** Remaining time an entity will be "immune" to further damage after being hurt. */
     public int hurtResistantTime;
     protected boolean firstUpdate;
-    protected boolean isImmuneToFire;
+    public boolean isImmuneToFire;
     protected EntityDataManager dataManager;
     protected static final DataParameter<Byte> FLAGS = EntityDataManager.<Byte>createKey(Entity.class, DataSerializers.BYTE);
     private static final DataParameter<Integer> AIR = EntityDataManager.<Integer>createKey(Entity.class, DataSerializers.VARINT);

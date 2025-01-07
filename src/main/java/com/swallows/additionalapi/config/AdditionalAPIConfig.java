@@ -1,6 +1,5 @@
 package com.swallows.additionalapi.config;
 
-import com.cleanroommc.configanytime.ConfigAnytime;
 import com.swallows.additionalapi.AdditionalAPI;
 import net.minecraftforge.common.config.Config;
 
@@ -13,7 +12,4 @@ public class AdditionalAPIConfig {
     @Config.Name("Server")
     public static Server SERVER = new Server();
 
-//    static {
-//        ConfigAnytime.register(AdditionalAPIConfig.class);
-//    }
 }

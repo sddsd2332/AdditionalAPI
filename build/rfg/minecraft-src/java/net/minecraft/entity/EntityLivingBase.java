@@ -187,7 +187,7 @@ public abstract class EntityLivingBase extends Entity
     private int jumpTicks;
     private float absorptionAmount;
     protected ItemStack activeItemStack = ItemStack.EMPTY;
-    protected int activeItemStackUseCount;
+    public int activeItemStackUseCount;
     protected int ticksElytraFlying;
     /** The BlockPos the entity had during the previous tick. */
     private BlockPos prevBlockpos;

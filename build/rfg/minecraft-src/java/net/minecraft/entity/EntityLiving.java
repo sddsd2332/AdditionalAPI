@@ -89,7 +89,7 @@ public abstract class EntityLiving extends EntityLivingBase
     /** Whether this entity should NOT despawn. */
     private boolean persistenceRequired;
     private final Map<PathNodeType, Float> mapPathPriority = Maps.newEnumMap(PathNodeType.class);
-    private ResourceLocation deathLootTable;
+    public ResourceLocation deathLootTable;
     private long deathLootTableSeed;
     private boolean isLeashed;
     private Entity leashHolder;

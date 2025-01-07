@@ -29,7 +29,7 @@ public class GuiChat extends GuiScreen implements ITabCompleter
     private int sentHistoryCursor = -1;
     private TabCompleter tabCompleter;
     /** Chat entry field */
-    protected GuiTextField inputField;
+    public GuiTextField inputField;
     /** is the text that appears when you press the chat key and the input box appears pre-filled */
     private String defaultInputFieldText = "";
 

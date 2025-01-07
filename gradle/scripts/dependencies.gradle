@@ -63,12 +63,14 @@ dependencies {
     //     transitive = false
     // }
     implementation 'curse.maven:crafttweaker-239197:5486112'
+    implementation "curse.maven:botania-225643:3330934"
 //    implementation 'curse.maven:ae2-570458:5411078'
 //    implementation 'curse.maven:crafttweaker-239197:4534504'
 
     implementation rfg.deobf("curse.maven:zenutil-401178:5779305")
     implementation rfg.deobf("curse.maven:configanytime-870276:5212709")
     implementation rfg.deobf("curse.maven:mixin-booter-419286:5739618")
+
 
 //    implementation 'com.github.oshi:oshi-core:6.6.5'
 }

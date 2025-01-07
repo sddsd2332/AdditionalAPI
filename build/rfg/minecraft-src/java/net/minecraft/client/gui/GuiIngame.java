@@ -78,7 +78,7 @@ public class GuiIngame extends Gui
     /** Previous frame vignette brightness (slowly changes by 1% each frame) */
     public float prevVignetteBrightness = 1.0F;
     /** Remaining ticks the item highlight should be visible */
-    protected int remainingHighlightTicks;
+    public int remainingHighlightTicks;
     /** The ItemStack that is currently being highlighted */
     protected ItemStack highlightingItemStack = ItemStack.EMPTY;
     protected final GuiOverlayDebug overlayDebug;

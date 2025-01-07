@@ -1,6 +1,7 @@
 package com.swallows.additionalapi.crafttweaker.util;
 
 import com.mojang.authlib.GameProfile;
+import crafttweaker.annotations.ZenRegister;
 import net.minecraft.server.MinecraftServer;
 import net.minecraftforge.common.DimensionManager;
 import stanhebben.zenscript.annotations.ZenClass;
@@ -9,6 +10,7 @@ import stanhebben.zenscript.annotations.ZenMethod;
 import java.nio.charset.StandardCharsets;
 import java.util.UUID;
 
+@ZenRegister
 @ZenClass("mods.additionalapi.UUID")
 @SuppressWarnings("unused")
 public class SaaUUID {

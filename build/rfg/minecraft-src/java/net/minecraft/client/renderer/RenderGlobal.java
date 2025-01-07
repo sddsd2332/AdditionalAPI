@@ -111,14 +111,14 @@ public class RenderGlobal implements IWorldEventListener, IResourceManagerReload
     private final Set<TileEntity> setTileEntities = Sets.<TileEntity>newHashSet();
     private ViewFrustum viewFrustum;
     /** The star GL Call list */
-    private int starGLCallList = -1;
+    public int starGLCallList = -1;
     /** OpenGL sky list */
-    private int glSkyList = -1;
+    public int glSkyList = -1;
     /** OpenGL sky list 2 */
     private int glSkyList2 = -1;
     private final VertexFormat vertexBufferFormat;
-    private VertexBuffer starVBO;
-    private VertexBuffer skyVBO;
+    public VertexBuffer starVBO;
+    public VertexBuffer skyVBO;
     private VertexBuffer sky2VBO;
     /** counts the cloud render updates. Used with mod to stagger some updates */
     private int cloudTickCounter;

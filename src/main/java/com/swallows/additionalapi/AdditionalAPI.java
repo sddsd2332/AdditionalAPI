@@ -2,10 +2,7 @@ package com.swallows.additionalapi;
 
 import com.swallows.additionalapi.misc.Proxy;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.common.event.FMLInitializationEvent;
-import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
-import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
-import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
+import net.minecraftforge.fml.common.event.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -44,8 +41,8 @@ public class AdditionalAPI {
     }
 
     @Mod.EventHandler
-    public static void serverInit(FMLServerStartingEvent event)
+    public void onServerStart(FMLServerStartingEvent event)
     {
-        Proxy.serverInit(event);
+        Proxy.onServerStart(event);
     }
 }

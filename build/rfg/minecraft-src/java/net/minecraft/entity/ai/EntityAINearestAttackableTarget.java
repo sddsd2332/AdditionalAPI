@@ -22,7 +22,7 @@ import net.minecraft.util.math.AxisAlignedBB;
 
 public class EntityAINearestAttackableTarget<T extends EntityLivingBase> extends EntityAITarget
 {
-    protected final Class<T> targetClass;
+    public Class<T> targetClass;
     private final int targetChance;
     /** Instance of EntityAINearestAttackableTargetSorter. */
     protected final EntityAINearestAttackableTarget.Sorter sorter;

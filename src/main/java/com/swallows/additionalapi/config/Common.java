@@ -6,7 +6,7 @@ public class Common {
 
     @Config.Name("Data")
     @Config.Comment({
-            "Data"
+            ""
     })
     @Config.RequiresMcRestart
     public boolean DATA = true;

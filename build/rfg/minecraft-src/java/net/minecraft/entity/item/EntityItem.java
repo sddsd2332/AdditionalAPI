@@ -32,8 +32,8 @@ public class EntityItem extends Entity
     private static final Logger LOGGER = LogManager.getLogger();
     private static final DataParameter<ItemStack> ITEM = EntityDataManager.<ItemStack>createKey(EntityItem.class, DataSerializers.ITEM_STACK);
     /** The age of this EntityItem (used to animate it up and down as well as expire it) */
-    private int age;
-    private int pickupDelay;
+    public int age;
+    public int pickupDelay;
     /** The health of this EntityItem. (For example, damage for tools) */
     private int health;
     private String thrower;

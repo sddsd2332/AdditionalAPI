@@ -48,7 +48,7 @@ public class EntityCreeper extends EntityMob
      */
     private int lastActiveTime;
     /** The amount of time since the creeper was close enough to the player to ignite */
-    private int timeSinceIgnited;
+    public int timeSinceIgnited;
     private int fuseTime = 30;
     /** Explosion radius for this creeper. */
     private int explosionRadius = 3;

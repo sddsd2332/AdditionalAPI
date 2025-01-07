@@ -2,12 +2,14 @@ package com.swallows.additionalapi.crafttweaker.world;
 
 import com.swallows.additionalapi.data.ArchiveData;
 import com.swallows.additionalapi.util.getData;
+import crafttweaker.annotations.ZenRegister;
 import crafttweaker.api.data.IData;
 import crafttweaker.mc1120.data.NBTConverter;
 import net.minecraft.nbt.NBTTagCompound;
 import stanhebben.zenscript.annotations.ZenClass;
 import stanhebben.zenscript.annotations.ZenMethod;
 
+@ZenRegister
 @ZenClass("mods.additionalapi.WorldData")
 @SuppressWarnings("unused")
 public class SaaWorldData {

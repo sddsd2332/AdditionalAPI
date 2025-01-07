@@ -31,7 +31,7 @@ public enum EnumDyeColor implements IStringSerializable
     private final String name;
     private final String translationKey;
     /** An int containing the corresponding RGB color for this dye color. */
-    private final int colorValue;
+    public final int colorValue;
     /**
      * An array containing 3 floats ranging from 0.0 to 1.0: the red, green, and blue components of the corresponding
      * color.
