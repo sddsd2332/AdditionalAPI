@@ -1,11 +1,9 @@
-
 build
 output
 *.iml
 *.ipr
 *.iws
 out
-
 MDK.zip
 /.gradle
 *.classpath
@@ -14,12 +12,10 @@ MDK.zip
 /eclipse
 *.txt
 *.launch
-
 *.blend1
 *.blend2
 /bin
 !/libs/**
-
 /.gradle
 /.idea
 /.vscode
