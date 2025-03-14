@@ -53,17 +53,17 @@ public class PlayerControllerMP
     /** The Minecraft instance. */
     private final Minecraft mc;
     private final NetHandlerPlayClient connection;
-    private BlockPos currentBlock = new BlockPos(-1, -1, -1);
+    public BlockPos currentBlock = new BlockPos(-1, -1, -1);
     /** The Item currently being used to destroy a block */
-    private ItemStack currentItemHittingBlock = ItemStack.EMPTY;
+    public ItemStack currentItemHittingBlock = ItemStack.EMPTY;
     /** Current block damage (MP) */
-    private float curBlockDamageMP;
+    public float curBlockDamageMP;
     /** Tick counter, when it hits 4 it resets back to 0 and plays the step sound */
     private float stepSoundTickCounter;
     /** Delays the first damage on the block after the first click on the block */
     private int blockHitDelay;
     /** Tells if the player is hitting a block */
-    private boolean isHittingBlock;
+    public boolean isHittingBlock;
     /** Current game type for the player */
     private GameType currentGameType = GameType.SURVIVAL;
     /** Index of the current item held by the player in the inventory hotbar */

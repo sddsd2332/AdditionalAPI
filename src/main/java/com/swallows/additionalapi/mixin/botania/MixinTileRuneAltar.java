@@ -8,18 +8,15 @@ import net.minecraft.util.math.AxisAlignedBB;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Overwrite;
 import org.spongepowered.asm.mixin.Shadow;
-import org.spongepowered.asm.mixin.Unique;
 import vazkii.botania.api.BotaniaAPI;
 import vazkii.botania.api.recipe.RecipeRuneAltar;
 import vazkii.botania.common.block.ModBlocks;
 import vazkii.botania.common.block.tile.TileRuneAltar;
 import vazkii.botania.common.block.tile.TileSimpleInventory;
-import vazkii.botania.common.item.ModItems;
 
-import java.util.ArrayList;
 import java.util.List;
 
-@Mixin(value = TileRuneAltar.class)
+@Mixin(value = TileRuneAltar.class, remap = false)
 public abstract class MixinTileRuneAltar extends TileSimpleInventory {
 
     @Shadow
@@ -33,20 +30,13 @@ public abstract class MixinTileRuneAltar extends TileSimpleInventory {
     @Shadow
     public void recieveMana(int mana) {}
 
-    @Unique
-    public static List<ItemStack> itemStacks = new ArrayList<>();
 
-    @Unique
-    public void setRuneItems() {
-        for(int i = 0; i < 16; i++) {
-            itemStacks.add(new ItemStack(ModItems.rune, 1, i));
-        }
-    }
-
-
+    /**
+     * @author .
+     * @reason .
+     */
     @Overwrite
     public void onWanded(EntityPlayer player, ItemStack wand) {
-        setRuneItems();
         if (!this.world.isRemote) {
             RecipeRuneAltar recipe = null;
             if (this.currentRecipe != null) {
@@ -81,10 +71,6 @@ public abstract class MixinTileRuneAltar extends TileSimpleInventory {
                     for(int i = 0; i < this.getSizeInventory(); i++) {
                         ItemStack stack = this.itemHandler.getStackInSlot(i);
                         if (!stack.isEmpty()) {
-                            if ((player == null || !player.capabilities.isCreativeMode)) {
-                                EntityItem outputRune = new EntityItem(this.world, (double)this.getPos().getX() + (double)0.5F, (double)this.getPos().getY() + (double)1.5F, (double)this.getPos().getZ() + (double)0.5F, stack.copy());
-                                this.world.spawnEntity(outputRune);
-                            }
                             this.itemHandler.setStackInSlot(i, ItemStack.EMPTY);
                         }
                     }
@@ -93,15 +79,4 @@ public abstract class MixinTileRuneAltar extends TileSimpleInventory {
             }
         }
     }
-
-    @Unique
-    public static void addItem(ItemStack stack) {
-        itemStacks.add(stack);
-    }
-
-    @Unique
-    public static void removeItem(ItemStack stack) {
-        itemStacks.remove(stack);
-    }
-
 }

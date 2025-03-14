@@ -33,14 +33,14 @@ public class Explosion
     /** whether or not the explosion sets fire to blocks around it */
     private final boolean causesFire;
     /** whether or not this explosion spawns smoke particles */
-    private final boolean damagesTerrain;
+    public final boolean damagesTerrain;
     private final Random random;
     public final World world;
-    private final double x;
-    private final double y;
-    private final double z;
-    private final Entity exploder;
-    private final float size;
+    protected final double x;
+    protected final double y;
+    protected final double z;
+    protected final Entity exploder;
+    protected final float size;
     public List<BlockPos> affectedBlockPositions;
     private final Map<EntityPlayer, Vec3d> playerKnockbackMap;
     private final Vec3d position;

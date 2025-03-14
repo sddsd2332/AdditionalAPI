@@ -6,10 +6,10 @@ import net.minecraftforge.common.config.Config;
 @Config(modid = AdditionalAPI.MOD_ID, name = AdditionalAPI.MOD_NAME)
 public class AdditionalAPIConfig {
 
-    @Config.Name("Common")
-    public static Common COMMON = new Common();
-
-    @Config.Name("Server")
-    public static Server SERVER = new Server();
-
+    @Config.Name("RSA")
+    public static ConfigRSA ConfigRSA = new ConfigRSA();
+    @Config.Name("Botania")
+    public static ConfigBotania ConfigBOTANIA = new ConfigBotania();
+    @Config.Name("TConevo")
+    public static ConfigTConevo ConfigTCONEVO = new ConfigTConevo();
 }

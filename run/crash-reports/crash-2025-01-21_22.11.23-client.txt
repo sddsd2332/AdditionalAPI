@@ -1,0 +1,169 @@
+---- Minecraft Crash Report ----
+
+WARNING: coremods are present:
+  ConfigAnytimePlugin (configanytime-870276-5212709-deobf.jar)
+  HechCore ([JEI-拼音搜索拓展]hecharacters-1.12.2-1.4.1.jar)
+  ZenUtilsPlugin (zenutil-401178-5779305-deobf.jar)
+  ZenRecipeReloadingPlugin ([CrT-JEI热重载]zenrecipereloading-1.4.1.jar)
+  JechCore ([JEI-拼音搜索]jecharacters-1.12.0-3.7.2.jar)
+  MixinBooter (mixin-booter-419286-5739618-deobf.jar)
+Contact their authors BEFORE contacting forge
+
+// Don't be sad, have a hug! <3
+
+Time: 1/21/25 10:11 PM
+Description: Unexpected error
+
+java.lang.NoClassDefFoundError: com/swallows/additionalapi/mixin/botania/RuneAltarItem
+	at vazkii.botania.common.block.tile.TileRuneAltar.setRuneItems(TileRuneAltar.java:542)
+	at vazkii.botania.common.block.tile.TileRuneAltar.onWanded(TileRuneAltar.java:552)
+	at vazkii.botania.common.block.mana.BlockRuneAltar.onUsedByWand(BlockRuneAltar.java:128)
+	at vazkii.botania.common.item.ItemTwigWand.onItemUse(ItemTwigWand.java:164)
+	at net.minecraft.item.ItemStack.onItemUse(ItemStack.java:201)
+	at net.minecraft.client.multiplayer.PlayerControllerMP.processRightClickBlock(PlayerControllerMP.java:509)
+	at net.minecraft.client.Minecraft.rightClickMouse(MinecraftAccessor.java:1694)
+	at net.minecraft.client.Minecraft.processKeyBinds(MinecraftAccessor.java:2381)
+	at net.minecraft.client.Minecraft.runTickKeyboard(MinecraftAccessor.java:2147)
+	at net.minecraft.client.Minecraft.runTick(MinecraftAccessor.java:1935)
+	at net.minecraft.client.Minecraft.runGameLoop(MinecraftAccessor.java:1188)
+	at net.minecraft.client.Minecraft.run(MinecraftAccessor.java:442)
+	at net.minecraft.client.main.Main.main(Main.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:87)
+	at GradleStart.main(GradleStart.java:19)
+
+No Mixin Metadata is found in the Stacktrace.
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Client thread
+Stacktrace:
+	at vazkii.botania.common.block.tile.TileRuneAltar.setRuneItems(TileRuneAltar.java:542)
+	at vazkii.botania.common.block.tile.TileRuneAltar.onWanded(TileRuneAltar.java:552)
+	at vazkii.botania.common.block.mana.BlockRuneAltar.onUsedByWand(BlockRuneAltar.java:128)
+	at vazkii.botania.common.item.ItemTwigWand.onItemUse(ItemTwigWand.java:164)
+	at net.minecraft.item.ItemStack.onItemUse(ItemStack.java:201)
+	at net.minecraft.client.multiplayer.PlayerControllerMP.processRightClickBlock(PlayerControllerMP.java:509)
+	at net.minecraft.client.Minecraft.rightClickMouse(MinecraftAccessor.java:1694)
+	at net.minecraft.client.Minecraft.processKeyBinds(MinecraftAccessor.java:2381)
+	at net.minecraft.client.Minecraft.runTickKeyboard(MinecraftAccessor.java:2147)
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityPlayerSP['Swallows_'/286, l='MpServer', x=6.12, y=64.00, z=69.74]]
+	Chunk stats: MultiplayerChunkCache: 622, 622
+	Level seed: 0
+	Level generator: ID 00 - default, ver 1. Features enabled: false
+	Level generator options: 
+	Level spawn location: World: (21,64,64), Chunk: (at 5,4,0 in 1,4; contains blocks 16,0,64 to 31,255,79), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,0,0 to 511,255,511)
+	Level time: 1156813 game time, 1156813 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: survival (ID 0). Hardcore: false. Cheats: false
+	Forced entities: 39 total; [EntityPig['猪'/128, l='MpServer', x=-13.74, y=66.00, z=106.63], EntityRabbit['兔子'/192, l='MpServer', x=67.47, y=72.00, z=87.34], EntityPig['猪'/129, l='MpServer', x=-14.77, y=65.00, z=111.57], EntityRabbit['兔子'/193, l='MpServer', x=70.46, y=66.00, z=124.58], EntityPlayerSP['Swallows_'/286, l='MpServer', x=6.12, y=64.00, z=69.74], EntityBat['蝙蝠'/130, l='MpServer', x=-1.20, y=35.97, z=127.65], EntityBat['蝙蝠'/194, l='MpServer', x=65.92, y=38.31, z=128.53], EntityPig['猪'/131, l='MpServer', x=-13.34, y=52.00, z=124.49], EntityPig['猪'/132, l='MpServer', x=-9.45, y=65.00, z=120.37], EntitySheep['羊'/133, l='MpServer', x=-1.47, y=66.00, z=120.75], EntityPig['猪'/134, l='MpServer', x=-5.85, y=65.00, z=128.34], EntityPig['猪'/135, l='MpServer', x=-4.82, y=66.00, z=145.50], EntityPig['猪'/136, l='MpServer', x=-2.31, y=68.00, z=147.49], EntityBat['蝙蝠'/207, l='MpServer', x=87.96, y=33.95, z=20.70], EntityBat['蝙蝠'/208, l='MpServer', x=83.40, y=27.40, z=43.53], EntityPig['猪'/149, l='MpServer', x=3.79, y=64.00, z=105.23], EntityItem['item.tile.livingrock0'/1941, l='MpServer', x=7.50, y=64.75, z=72.50], EntitySheep['羊'/150, l='MpServer', x=12.30, y=64.00, z=127.21], EntityBat['蝙蝠'/151, l='MpServer', x=0.71, y=33.87, z=129.83], EntityBat['蝙蝠'/152, l='MpServer', x=13.77, y=53.11, z=139.44], EntityPig['猪'/153, l='MpServer', x=9.27, y=66.00, z=139.43], EntityRabbit['兔子'/163, l='MpServer', x=28.55, y=64.00, z=-9.74], EntityBat['蝙蝠'/164, l='MpServer', x=25.25, y=52.10, z=139.75], EntityRabbit['兔子'/101, l='MpServer', x=-51.78, y=65.00, z=-5.79], EntityRabbit['兔子'/102, l='MpServer', x=-53.21, y=65.00, z=7.54], EntityRabbit['兔子'/166, l='MpServer', x=53.13, y=63.00, z=26.63], EntityRabbit['兔子'/103, l='MpServer', x=-60.41, y=64.00, z=49.74], EntityRabbit['兔子'/167, l='MpServer', x=41.52, y=65.00, z=101.70], EntityBat['蝙蝠'/104, l='MpServer', x=-44.13, y=30.83, z=77.40], EntityPig['猪'/105, l='MpServer', x=-41.78, y=63.00, z=103.74], EntityPig['猪'/109, l='MpServer', x=-33.29, y=64.00, z=101.40], EntityPig['猪'/110, l='MpServer', x=-40.25, y=63.00, z=130.25], EntityRabbit['兔子'/176, l='MpServer', x=45.99, y=64.12, z=15.11], EntityBat['蝙蝠'/177, l='MpServer', x=57.07, y=41.11, z=135.07], EntityBat['蝙蝠'/114, l='MpServer', x=-25.39, y=26.10, z=75.04], EntityPig['猪'/115, l='MpServer', x=-20.74, y=65.00, z=109.23], EntityBat['蝙蝠'/116, l='MpServer', x=-21.28, y=22.03, z=140.77], EntityBat['蝙蝠'/117, l='MpServer', x=-24.44, y=22.00, z=140.36], EntityPig['猪'/127, l='MpServer', x=-2.70, y=63.00, z=37.49]]
+	Retry entities: 0 total; []
+	Server brand: fml,forge
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:456)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(MinecraftAccessor.java:2889)
+	at net.minecraft.client.Minecraft.run(MinecraftAccessor.java:471)
+	at net.minecraft.client.main.Main.main(Main.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:87)
+	at GradleStart.main(GradleStart.java:19)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.12.2
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_422, Azul Systems, Inc.
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), Azul Systems, Inc.
+	Memory: 2492846560 bytes (2377 MB) / 3105357824 bytes (2961 MB) up to 5726797824 bytes (5461 MB)
+	JVM Flags: 2 total; -Xms1G -Xmx6G
+	IntCache: cache: 0, tcache: 0, allocated: 12, tallocated: 94
+	FML: MCP 9.42 Powered by Forge 14.23.5.2847 26 mods loaded, 26 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+
+	| State  | ID                 | Version       | Source                                              | Signature |
+	|:------ |:------------------ |:------------- |:--------------------------------------------------- |:--------- |
+	| LCHIJA | minecraft          | 1.12.2        | minecraft.jar                                       | None      |
+	| LCHIJA | mcp                | 9.42          | minecraft.jar                                       | None      |
+	| LCHIJA | mixinbooter        | 9.1           | minecraft.jar                                       | None      |
+	| LCHIJA | FML                | 8.0.99.99     | recompiled_minecraft-1.12.2.jar                     | None      |
+	| LCHIJA | forge              | 14.23.5.2847  | recompiled_minecraft-1.12.2.jar                     | None      |
+	| LCHIJA | jecharacters       | 1.12.0-3.7.2  | [JEI-拼音搜索]jecharacters-1.12.0-3.7.2.jar             | None      |
+	| LCHIJA | hecharacters       | @VERSION@     | [JEI-拼音搜索拓展]hecharacters-1.12.2-1.4.1.jar           | None      |
+	| LCHIJA | crafttweaker       | 4.1.20        | crafttweaker-239197-5486112.jar                     | None      |
+	| LCHIJA | additionalapi      | 1.0.0         | additionalapi-1.0.0-dev.jar                         | None      |
+	| LCHIJA | ctgui              | 1.0.0         | crafttweaker-239197-5486112.jar                     | None      |
+	| LCHIJA | mtlib              | 3.0.7         | [CrT_MoT前置]MTLib-3.0.7.jar                          | None      |
+	| LCHIJA | modtweaker         | 4.0.19        | [CrT_Mod支持]modtweaker-4.0.20.4.jar                  | None      |
+	| LCHIJA | jei                | 4.25.4        | [JEI-HEI]HadEnoughItems_1.12.2-4.25.4.jar           | None      |
+	| LCHIJA | crafttweakerjei    | 2.0.3         | crafttweaker-239197-5486112.jar                     | None      |
+	| LCHIJA | baubles            | 1.5.2         | [植物魔法前置]Baubles-1.12-1.5.2.jar                      | None      |
+	| LCHIJA | botania            | r1.10-364     | botania-225643-3330934.jar                          | None      |
+	| LCHIJA | configanytime      | 3.0           | configanytime-870276-5212709-deobf.jar              | None      |
+	| LCHIJA | zenutils           | 1.20.7        | zenutil-401178-5779305-deobf.jar                    | None      |
+	| LCHIJA | zenrecipereloading | 1.4.1         | [CrT-JEI热重载]zenrecipereloading-1.4.1.jar            | None      |
+	| LCHIJA | base               | 3.14.0        | [CrT_CoT前置]base-1.12.2-3.14.0.jar                   | None      |
+	| LCHIJA | contenttweaker     | 1.12.2-4.10.0 | [CrT_CoT]ContentTweaker-1.12.2-4.10.0.jar           | None      |
+	| LCHIJA | inworldcrafting    | 1.12.2-1.2.0  | [Crt_iwc]inworldcrafting-1.12.2-1.2.0-universal.jar | None      |
+	| LCHIJA | moretweaker        | 1.0.19        | [Crt附加]MoreTweaker-1.0.19.jar                       | None      |
+	| LCHIJA | blockdrops         | 1.4.0         | [JEI-物品掉落]blockdrops-1.12.2-1.4.0.jar               | None      |
+	| LCHIJA | jetif              | 1.5.2         | [JEI-物品流体]jetif-1.12.2-1.5.2.jar                    | None      |
+	| LCHIJA | jeresources        | 0.9.2.60      | [JEIR]JustEnoughResources-1.12.2-0.9.2.60.jar       | None      |
+
+	Loaded coremods (and transformers): 
+ConfigAnytimePlugin (configanytime-870276-5212709-deobf.jar)
+  
+HechCore ([JEI-拼音搜索拓展]hecharacters-1.12.2-1.4.1.jar)
+  
+ZenUtilsPlugin (zenutil-401178-5779305-deobf.jar)
+  
+ZenRecipeReloadingPlugin ([CrT-JEI热重载]zenrecipereloading-1.4.1.jar)
+  
+JechCore ([JEI-拼音搜索]jecharacters-1.12.0-3.7.2.jar)
+  me.towdium.jecharacters.core.JechClassTransformer
+MixinBooter (mixin-booter-419286-5739618-deobf.jar)
+  
+	GL info: ' Vendor: 'NVIDIA Corporation' Version: '4.6.0 NVIDIA 565.90' Renderer: 'NVIDIA GeForce RTX 3070 Laptop GPU/PCIe/SSE2'
+	Launched Version: FML_DEV
+	LWJGL: 2.9.4
+	OpenGL: NVIDIA GeForce RTX 3070 Laptop GPU/PCIe/SSE2 GL version 4.6.0 NVIDIA 565.90, NVIDIA Corporation
+	GL Caps: Using GL 1.3 multitexturing.
+Using GL 1.3 texture combiners.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Shaders are available because OpenGL 2.1 is supported.
+VBOs are available because OpenGL 1.5 is supported.
+
+	Using VBOs: Yes
+	Is Modded: Definitely; Client brand changed to 'fml,forge'
+	Type: Client (map_client.txt)
+	Resource Packs: 
+	Current Language: 简体中文 (中国)
+	Profiler Position: N/A (disabled)
+	CPU: 16x AMD Ryzen 9 5900HX with Radeon Graphics 

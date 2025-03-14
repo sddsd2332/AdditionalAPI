@@ -47,12 +47,12 @@ public abstract class EntityArrow extends Entity implements IProjectile
         }
     });
     private static final DataParameter<Byte> CRITICAL = EntityDataManager.<Byte>createKey(EntityArrow.class, DataSerializers.BYTE);
-    private int xTile;
-    private int yTile;
-    private int zTile;
-    private Block inTile;
-    private int inData;
-    protected boolean inGround;
+    public int xTile;
+    public int yTile;
+    public int zTile;
+    public Block inTile;
+    public int inData;
+    public boolean inGround;
     protected int timeInGround;
     /** 1 if the player can pick up the arrow */
     public EntityArrow.PickupStatus pickupStatus;
@@ -60,9 +60,9 @@ public abstract class EntityArrow extends Entity implements IProjectile
     public int arrowShake;
     /** The owner of this arrow. */
     public Entity shootingEntity;
-    private int ticksInGround;
-    private int ticksInAir;
-    private double damage;
+    public int ticksInGround;
+    public int ticksInAir;
+    public double damage;
     /** The amount of knockback an arrow applies when it hits a mob. */
     public int knockbackStrength;
 

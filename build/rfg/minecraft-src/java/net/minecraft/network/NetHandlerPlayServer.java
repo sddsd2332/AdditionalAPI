@@ -125,7 +125,7 @@ public class NetHandlerPlayServer implements INetHandlerPlayServer, ITickable
 {
     private static final Logger LOGGER = LogManager.getLogger();
     public final NetworkManager netManager;
-    private final MinecraftServer server;
+    public final MinecraftServer server;
     public EntityPlayerMP player;
     private int networkTickCount;
     private long field_194402_f;

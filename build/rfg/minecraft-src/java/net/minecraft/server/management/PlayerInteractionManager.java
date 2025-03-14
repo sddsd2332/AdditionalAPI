@@ -34,7 +34,7 @@ public class PlayerInteractionManager
     public EntityPlayerMP player;
     private GameType gameType = GameType.NOT_SET;
     /** True if the player is destroying a block */
-    private boolean isDestroyingBlock;
+    public boolean isDestroyingBlock;
     private int initialDamage;
     private BlockPos destroyPos = BlockPos.ORIGIN;
     private int curblockDamage;

@@ -64,6 +64,11 @@ dependencies {
     // }
     implementation 'curse.maven:crafttweaker-239197:5486112'
     implementation "curse.maven:botania-225643:3330934"
+    implementation "curse.maven:Tinkers_Evolution-384589:3362723"
+    implementation "curse.maven:TinkersConstruct-74072:2902483"
+    implementation "curse.maven:Mantle-74924:2713386"
+    implementation "curse.maven:ContentTweaker-237065:3331364"
+    implementation "curse.maven:B.A.S.E-246996:3440963"
 //    implementation 'curse.maven:ae2-570458:5411078'
 //    implementation 'curse.maven:crafttweaker-239197:4534504'
 

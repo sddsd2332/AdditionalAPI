@@ -24,7 +24,7 @@ public class AdditionalAPI {
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
-        LOGGER.info("Hello From {}!", Tags.MOD_NAME);
+        LOGGER.info("在未被允许的情况下请不要使用该Mod！如遇问题请即使联系QQ：1598773037", Tags.MOD_NAME);
         Proxy.preInit(event);
     }
 
@@ -41,8 +41,8 @@ public class AdditionalAPI {
     }
 
     @Mod.EventHandler
-    public void onServerStart(FMLServerStartingEvent event)
+    public void serverStarting(FMLServerStartingEvent event)
     {
-        Proxy.onServerStart(event);
+        Proxy.serverStarting(event);
     }
 }

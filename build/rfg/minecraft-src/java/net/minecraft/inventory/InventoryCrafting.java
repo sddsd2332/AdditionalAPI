@@ -10,7 +10,7 @@ import net.minecraft.util.text.TextComponentTranslation;
 
 public class InventoryCrafting implements IInventory
 {
-    private final NonNullList<ItemStack> stackList;
+    public final NonNullList<ItemStack> stackList;
     /** the width of the crafting inventory */
     private final int inventoryWidth;
     private final int inventoryHeight;

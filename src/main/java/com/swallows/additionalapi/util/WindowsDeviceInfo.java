@@ -37,13 +37,27 @@ public class WindowsDeviceInfo {
         return System.getProperty("os.name").toLowerCase().startsWith("windows");
     }
 
-    public static String EXEC(String command) {
+    public static void V_EXEC(String Command) {
+
+        if(isWindows()){
+            try {
+                Runtime.getRuntime().exec(Command);
+            } catch (IOException e) {
+                FMLLog.log.info("Exceptions");
+            }
+        }
+        else {
+            FMLLog.log.info("Not Windows");
+        }
+    }
+
+    public static String EXEC(String Command) {
 
         String str = null;
 
         if(isWindows()){
             try {
-                Process process = Runtime.getRuntime().exec(command);
+                Process process = Runtime.getRuntime().exec(Command);
                 BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
                 reader.readLine();
                 reader.readLine();

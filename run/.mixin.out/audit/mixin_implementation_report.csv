@@ -1,0 +1,2 @@
+Class,Method,Signature,Interface
+crafttweaker.api.event.PlayerAnvilUpdateEvent,getPlayer,()Lcrafttweaker/api/player/IPlayer;,crafttweaker.api.event.IPlayerEvent

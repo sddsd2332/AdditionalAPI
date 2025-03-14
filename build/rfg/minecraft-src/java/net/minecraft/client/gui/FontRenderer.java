@@ -559,7 +559,7 @@ public class FontRenderer implements IResourceManagerReloadListener
     /**
      * Render single line string by setting GL color, current (posX,posY), and calling renderStringAtPos()
      */
-    private int renderString(String text, float x, float y, int color, boolean dropShadow)
+    public int renderString(String text, float x, float y, int color, boolean dropShadow)
     {
         if (text == null)
         {
@@ -871,7 +871,7 @@ public class FontRenderer implements IResourceManagerReloadListener
     /**
      * Determines how many characters from the string will fit into the specified width.
      */
-    private int sizeStringToWidth(String str, int wrapWidth)
+    public int sizeStringToWidth(String str, int wrapWidth)
     {
         int i = str.length();
         int j = 0;

@@ -1,0 +1,152 @@
+---- Minecraft Crash Report ----
+
+WARNING: coremods are present:
+  ConfigAnytimePlugin (configanytime-870276-5212709-deobf.jar)
+  HechCore ([JEI-拼音搜索拓展]hecharacters-1.12.2-1.4.1.jar)
+  ZenUtilsPlugin (zenutil-401178-5779305-deobf.jar)
+  ZenRecipeReloadingPlugin ([CrT-JEI热重载]zenrecipereloading-1.4.1.jar)
+  JechCore ([JEI-拼音搜索]jecharacters-1.12.0-3.7.2.jar)
+  MixinBooter (mixin-booter-419286-5739618-deobf.jar)
+Contact their authors BEFORE contacting forge
+
+// Shall we play a game?
+
+Time: 1/22/25 2:14 AM
+Description: Ticking block entity
+
+java.lang.NoClassDefFoundError: com/swallows/additionalapi/mixin/botania/MixinTileRuneAltar$IRuneAltarItem
+	at vazkii.botania.common.block.mana.BlockRuneAltar.createTileEntity(BlockRuneAltar.java:112)
+	at net.minecraft.world.chunk.Chunk.createNewTileEntity(Chunk.java:836)
+	at net.minecraft.world.chunk.Chunk.getTileEntity(Chunk.java:854)
+	at net.minecraft.world.World.getTileEntity(World.java:2613)
+	at vazkii.botania.common.entity.EntityManaBurst.onImpact(EntityManaBurst.java:549)
+	at vazkii.botania.common.entity.EntityManaBurst.superUpdate(EntityManaBurst.java:256)
+	at vazkii.botania.common.entity.EntityManaBurst.onUpdate(EntityManaBurst.java:312)
+	at vazkii.botania.common.entity.EntityManaBurst.getCollidedTile(EntityManaBurst.java:376)
+	at vazkii.botania.common.block.tile.mana.TileSpreader.checkForReceiver(TileSpreader.java:480)
+	at vazkii.botania.common.block.tile.mana.TileSpreader.update(TileSpreader.java:221)
+	at net.minecraft.world.World.updateEntities(World.java:2007)
+	at net.minecraft.world.WorldServer.updateEntities(WorldServer.java:642)
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:841)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:742)
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:192)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:591)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.lang.ClassNotFoundException: com.swallows.additionalapi.mixin.botania.MixinTileRuneAltar$IRuneAltarItem
+	at net.minecraft.launchwrapper.LaunchClassLoader.findClass(LaunchClassLoader.java:101)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:419)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:352)
+	... 17 more
+
+No Mixin Metadata is found in the Stacktrace.
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server thread
+Stacktrace:
+	at vazkii.botania.common.block.mana.BlockRuneAltar.createTileEntity(BlockRuneAltar.java:112)
+	at net.minecraft.world.chunk.Chunk.createNewTileEntity(Chunk.java:836)
+	at net.minecraft.world.chunk.Chunk.getTileEntity(Chunk.java:854)
+	at net.minecraft.world.World.getTileEntity(World.java:2613)
+	at vazkii.botania.common.entity.EntityManaBurst.onImpact(EntityManaBurst.java:549)
+	at vazkii.botania.common.entity.EntityManaBurst.superUpdate(EntityManaBurst.java:256)
+	at vazkii.botania.common.entity.EntityManaBurst.onUpdate(EntityManaBurst.java:312)
+	at vazkii.botania.common.entity.EntityManaBurst.getCollidedTile(EntityManaBurst.java:376)
+	at vazkii.botania.common.block.tile.mana.TileSpreader.checkForReceiver(TileSpreader.java:480)
+	at vazkii.botania.common.block.tile.mana.TileSpreader.update(TileSpreader.java:221)
+
+-- Block entity being ticked --
+Details:
+	Name: botania:spreader // vazkii.botania.common.block.tile.mana.TileSpreader
+	Block type: ID #259 (tile.spreader // vazkii.botania.common.block.mana.BlockSpreader // botania:spreader)
+	Block data value: 3 / 0x3 / 0b0011
+	Block location: World: (7,64,74), Chunk: (at 7,4,10 in 0,4; contains blocks 0,0,64 to 15,255,79), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,0,0 to 511,255,511)
+	Actual block type: ID #259 (tile.spreader // vazkii.botania.common.block.mana.BlockSpreader // botania:spreader)
+	Actual block data value: 3 / 0x3 / 0b0011
+Stacktrace:
+	at net.minecraft.world.World.updateEntities(World.java:2007)
+	at net.minecraft.world.WorldServer.updateEntities(WorldServer.java:642)
+
+-- Affected level --
+Details:
+	Level name: 新的世界
+	All players: 0 total; []
+	Chunk stats: ServerChunkCache: 625 Drop: 0
+	Level seed: 512049468431009291
+	Level generator: ID 00 - default, ver 1. Features enabled: true
+	Level generator options: 
+	Level spawn location: World: (21,64,64), Chunk: (at 5,4,0 in 1,4; contains blocks 16,0,64 to 31,255,79), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,0,0 to 511,255,511)
+	Level time: 1180220 game time, 1180220 day time
+	Level dimension: 0
+	Level storage version: 0x04ABD - Anvil
+	Level weather: Rain time: 9811 (now: false), thunder time: 129630 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: true
+Stacktrace:
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:841)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:742)
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:192)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:591)
+	at java.lang.Thread.run(Thread.java:750)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.12.2
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_422, Azul Systems, Inc.
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), Azul Systems, Inc.
+	Memory: 2244827656 bytes (2140 MB) / 3094347776 bytes (2951 MB) up to 5726797824 bytes (5461 MB)
+	JVM Flags: 2 total; -Xms1G -Xmx6G
+	IntCache: cache: 0, tcache: 0, allocated: 12, tallocated: 94
+	FML: MCP 9.42 Powered by Forge 14.23.5.2847 26 mods loaded, 26 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+
+	| State  | ID                 | Version       | Source                                              | Signature |
+	|:------ |:------------------ |:------------- |:--------------------------------------------------- |:--------- |
+	| LCHIJA | minecraft          | 1.12.2        | minecraft.jar                                       | None      |
+	| LCHIJA | mcp                | 9.42          | minecraft.jar                                       | None      |
+	| LCHIJA | mixinbooter        | 9.1           | minecraft.jar                                       | None      |
+	| LCHIJA | FML                | 8.0.99.99     | recompiled_minecraft-1.12.2.jar                     | None      |
+	| LCHIJA | forge              | 14.23.5.2847  | recompiled_minecraft-1.12.2.jar                     | None      |
+	| LCHIJA | jecharacters       | 1.12.0-3.7.2  | [JEI-拼音搜索]jecharacters-1.12.0-3.7.2.jar             | None      |
+	| LCHIJA | hecharacters       | @VERSION@     | [JEI-拼音搜索拓展]hecharacters-1.12.2-1.4.1.jar           | None      |
+	| LCHIJA | crafttweaker       | 4.1.20        | crafttweaker-239197-5486112.jar                     | None      |
+	| LCHIJA | additionalapi      | 1.0.0         | additionalapi-1.0.0-dev.jar                         | None      |
+	| LCHIJA | ctgui              | 1.0.0         | crafttweaker-239197-5486112.jar                     | None      |
+	| LCHIJA | mtlib              | 3.0.7         | [CrT_MoT前置]MTLib-3.0.7.jar                          | None      |
+	| LCHIJA | modtweaker         | 4.0.19        | [CrT_Mod支持]modtweaker-4.0.20.4.jar                  | None      |
+	| LCHIJA | jei                | 4.25.4        | [JEI-HEI]HadEnoughItems_1.12.2-4.25.4.jar           | None      |
+	| LCHIJA | crafttweakerjei    | 2.0.3         | crafttweaker-239197-5486112.jar                     | None      |
+	| LCHIJA | baubles            | 1.5.2         | [植物魔法前置]Baubles-1.12-1.5.2.jar                      | None      |
+	| LCHIJA | botania            | r1.10-364     | botania-225643-3330934.jar                          | None      |
+	| LCHIJA | configanytime      | 3.0           | configanytime-870276-5212709-deobf.jar              | None      |
+	| LCHIJA | zenutils           | 1.20.7        | zenutil-401178-5779305-deobf.jar                    | None      |
+	| LCHIJA | zenrecipereloading | 1.4.1         | [CrT-JEI热重载]zenrecipereloading-1.4.1.jar            | None      |
+	| LCHIJA | base               | 3.14.0        | [CrT_CoT前置]base-1.12.2-3.14.0.jar                   | None      |
+	| LCHIJA | contenttweaker     | 1.12.2-4.10.0 | [CrT_CoT]ContentTweaker-1.12.2-4.10.0.jar           | None      |
+	| LCHIJA | inworldcrafting    | 1.12.2-1.2.0  | [Crt_iwc]inworldcrafting-1.12.2-1.2.0-universal.jar | None      |
+	| LCHIJA | moretweaker        | 1.0.19        | [Crt附加]MoreTweaker-1.0.19.jar                       | None      |
+	| LCHIJA | blockdrops         | 1.4.0         | [JEI-物品掉落]blockdrops-1.12.2-1.4.0.jar               | None      |
+	| LCHIJA | jetif              | 1.5.2         | [JEI-物品流体]jetif-1.12.2-1.5.2.jar                    | None      |
+	| LCHIJA | jeresources        | 0.9.2.60      | [JEIR]JustEnoughResources-1.12.2-0.9.2.60.jar       | None      |
+
+	Loaded coremods (and transformers): 
+ConfigAnytimePlugin (configanytime-870276-5212709-deobf.jar)
+  
+HechCore ([JEI-拼音搜索拓展]hecharacters-1.12.2-1.4.1.jar)
+  
+ZenUtilsPlugin (zenutil-401178-5779305-deobf.jar)
+  
+ZenRecipeReloadingPlugin ([CrT-JEI热重载]zenrecipereloading-1.4.1.jar)
+  
+JechCore ([JEI-拼音搜索]jecharacters-1.12.0-3.7.2.jar)
+  me.towdium.jecharacters.core.JechClassTransformer
+MixinBooter (mixin-booter-419286-5739618-deobf.jar)
+  
+	GL info: ~~ERROR~~ RuntimeException: No OpenGL context found in the current thread.
+	Profiler Position: N/A (disabled)
+	Player Count: 0 / 8; []
+	Type: Integrated Server (map_client.txt)
+	Is Modded: Definitely; Client brand changed to 'fml,forge'

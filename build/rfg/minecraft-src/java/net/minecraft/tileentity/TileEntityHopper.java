@@ -30,8 +30,8 @@ import net.minecraft.world.World;
 
 public class TileEntityHopper extends TileEntityLockableLoot implements IHopper, ITickable
 {
-    private NonNullList<ItemStack> inventory = NonNullList.<ItemStack>withSize(5, ItemStack.EMPTY);
-    private int transferCooldown = -1;
+    public NonNullList<ItemStack> inventory = NonNullList.<ItemStack>withSize(5, ItemStack.EMPTY);
+    public int transferCooldown = -1;
     private long tickedGameTime;
 
     public static void registerFixesHopper(DataFixer fixer)

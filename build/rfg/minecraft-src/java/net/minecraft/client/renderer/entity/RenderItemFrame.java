@@ -94,7 +94,7 @@ public class RenderItemFrame extends Render<EntityItemFrame>
         return null;
     }
 
-    private void renderItem(EntityItemFrame itemFrame)
+    protected void renderItem(EntityItemFrame itemFrame)
     {
         ItemStack itemstack = itemFrame.getDisplayedItem();
 

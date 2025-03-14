@@ -149,7 +149,7 @@ public class EntityItemFrame extends EntityHanging
     /**
      * Removes the dot representing this frame's position from the map when the item frame is broken.
      */
-    private void removeFrameFromMap(ItemStack stack)
+    protected void removeFrameFromMap(ItemStack stack)
     {
         if (!stack.isEmpty())
         {

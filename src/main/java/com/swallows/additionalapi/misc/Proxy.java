@@ -1,7 +1,8 @@
 package com.swallows.additionalapi.misc;
 
+import com.swallows.additionalapi.command.CommandCreativeRSA;
+import com.swallows.additionalapi.config.AdditionalAPIConfig;
 import crafttweaker.CraftTweakerAPI;
-import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.*;
 
 public class Proxy {
@@ -20,8 +21,10 @@ public class Proxy {
     {
 
     }
-    public static void onServerStart(FMLServerStartingEvent event)
+    public static void serverStarting(FMLServerStartingEvent event)
     {
-
+        if(AdditionalAPIConfig.ConfigRSA.RSA) {
+            event.registerServerCommand(new CommandCreativeRSA());
+        }
     }
 }
