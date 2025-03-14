@@ -12,4 +12,6 @@ public class AdditionalAPIConfig {
     public static ConfigBotania ConfigBOTANIA = new ConfigBotania();
     @Config.Name("TConevo")
     public static ConfigTConevo ConfigTCONEVO = new ConfigTConevo();
+    @Config.Name("ic2")
+    public static ConfigIC2 configIC2 = new ConfigIC2();
 }

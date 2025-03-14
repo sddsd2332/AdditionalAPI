@@ -103,45 +103,9 @@ minecraft {
 }
 
 repositories {
-    flatDir {
-        dirs 'libs'
-    }
     maven {
         name 'CleanroomMC Maven'
         url 'https://maven.cleanroommc.com'
-    }
-    maven {
-        url "https://dvs1.progwml6.com/files/maven"
-    }
-    maven {
-        url "https://maven.blamejared.com"
-    }
-    maven {
-        url "https://maven.covers1624.net/"
-    }
-    maven {
-        url "https://chickenbones.net/maven/"
-    }
-    maven {
-        url "https://www.ryanliptak.com/maven/"
-    }
-    maven {
-        url "https://maven.ellpeck.de/"
-    }
-    maven {
-        url "https://maven2.ic2.player.to/"
-    }
-    maven {
-        url "https://maven.tterrag.com"
-    }
-    maven {
-        url = "https://maven.thiakil.com"
-    }
-    maven {
-        url "https://maven.amadornes.com/"
-    }
-    maven {
-        url "https://www.cursemaven.com"
     }
 }
 

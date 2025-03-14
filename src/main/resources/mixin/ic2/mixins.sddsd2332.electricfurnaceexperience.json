@@ -1,0 +1,10 @@
+{
+  "package": "com.swallows.additionalapi.mixin.ic2",
+  "refmap": "mixins.additionalapi.refmap.json",
+  "target": "@env(DEFAULT)",
+  "minVersion": "0.8.5",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "MixinTileEntityElectricFurnace"
+  ]
+}

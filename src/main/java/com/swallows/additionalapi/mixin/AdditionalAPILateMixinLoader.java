@@ -20,6 +20,7 @@ public class AdditionalAPILateMixinLoader implements ILateMixinLoader {
     static {
         addModdedMixinCFG("mixin/botania/mixins.saabotania.json", "botania", () -> AdditionalAPIConfig.ConfigBOTANIA.RuneRefunded);
         addModdedMixinCFG("mixin/tconevo/mixins.saatconevo.json", new String[]{"tconevo", "avaritia"}, () -> AdditionalAPIConfig.ConfigTCONEVO.OmnipotenceItemDrops);
+        addModdedMixinCFG("mixin/ic2/mixins.sddsd2332.electricfurnaceexperience.json", "ic2", () -> AdditionalAPIConfig.configIC2.ElectricFurnaceExperience);
     }
 
     @Override
