@@ -1,4 +1,4 @@
-<<<<<<< main
+
 build
 output
 *.iml
@@ -19,10 +19,10 @@ MDK.zip
 *.blend2
 /bin
 !/libs/**
-=======
+
 /.gradle
 /.idea
 /.vscode
 /build
 /run
->>>>>>> main
+
